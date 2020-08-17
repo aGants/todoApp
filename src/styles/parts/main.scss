@@ -1,6 +1,13 @@
-@import 'vars.scss';
+@import 'mixins.scss', 'vars.scss';
 
 * {
   margin: 0;
   padding: 0;
   }
+
+body {
+  @mixin w-from($screen-lg) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -36,7 +36,7 @@ function buildPages() {
 function buildStyles() {
   return src('src/styles/*.scss')
     .pipe(sass())
-    .pipe(concat('style.css'))
+    // .pipe(concat('style.css'))
     .pipe(postcss([
       autoprefixer(),
       cssnano()
@@ -54,11 +54,6 @@ function buildScripts() {
   return src('src/scripts/**/*.js')
     .pipe(uglify())
     .pipe(dest('build/scripts/'));
-}
-
-function buildFonts() {
-  return src('src/fonts/**/*.*')
-    .pipe(dest('build/fonts/'));
 }
 
 function clearBuild() {
@@ -81,7 +76,7 @@ exports.default =
     parallel(
       devServer,
       series(
-        parallel(buildPages, buildStyles, buildScripts, buildFonts, buildAssets),
+        parallel(buildPages, buildStyles, buildScripts, buildAssets),
         watchFiles
       )
     )
