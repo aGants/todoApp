@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  margin: 15px auto 30px;
+  font: $font-style;
+
+  &__img {
+    width: 35vw;
+    height: 35vw;
+    border: 5px solid var(--border-color);
+  }
+
+  &-info {
+    width: 40vw;
+    height: 35vw;
+
+    &__name {
+      margin-top: 1vw;
+      font-size: x-large;
+      color: var(--title-color);
+      @extend %header-font;
+    }
+
+    &__lvl {
+      font-size: large;
+      color: var(--subtitle-color);
+      @extend %header-font;
+    }
+
+    &__progress {
+      @extend %header-block;
+      border: 1vw solid var(--border-color);
+      color: var(--progress-color);
+      
+      &::-webkit-progress-bar { background-color: var(--bgcolor); }
+      &::-webkit-progress-value { background: var(--progress-color);}
+      
+      &::-moz-progress-bar { background-color: var(--bgcolor); }
+      &::-moz-progress-value { background: var(--progress-color); }
+    }
+
+    &__button {
+      @extend %header-block;
+      height: 7vw;
+      outline: none;
+      border: 0px;
+      background-color: var(--border-color);
+      font-size: large;
+      color: var(--subtitle-color);
+    }
+
+
+  }
+}

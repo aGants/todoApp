@@ -1,0 +1,75 @@
+@import 'parts/main.scss', 'parts/header.scss';
+
+.today {
+  min-height: 75vh;
+  padding: 20px 0;
+  overflow: hidden;
+  background-color: var(--backgroundcolor);
+
+  &-add {
+    @extend %list-blocks;
+    height: 50px;
+    background: var(--bgcolor);
+    
+    &__message {
+      width: 80vw;
+      height: 30px;
+      padding: 5px 10px;
+      border: 2px solid var(--important);
+      &:focus, &:active {
+        outline: none;
+      }
+    }
+  }
+
+  &-list {
+    margin-left: 0;
+    padding-left: 0;
+
+    &__item {
+      @extend %list-blocks;
+      list-style-type: none;
+      height: 40px;
+      text-overflow: ellipsis;
+
+      &-delete {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+label {
+  width: 70vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: lowercase;
+}
+
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=checkbox]+label:before {
+  content: "\2713";
+  font-size: 25px;
+  line-height: 20px;
+  color: transparent;
+  display: inline-block;
+  border: 2px solid var(--progress-color);
+  margin-right: 10px;
+  padding: 2px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  transition: color ease .3s;
+}
+
+input[type=checkbox]:checked+label:before {
+  color: #000;
+}

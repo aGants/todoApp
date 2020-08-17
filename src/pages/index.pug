@@ -1,0 +1,12 @@
+doctype html
+html(lang="ru")
+  head
+    include parts/head.pug
+    
+  body
+    include parts/header.pug
+    main.today
+        div.today-add
+            input(type="text" placeholder="Введите задачу").today-add__message 
+        ul.today-list
+  script(src="scripts/script.js")

@@ -1,0 +1,29 @@
+:root {
+  --bgcolor:         #ffffff;
+  --backgroundcolor: #ffebe3;
+  --border-color:    #fcc1a9;
+  --title-color:     #000000;
+  --subtitle-color:  #4b4b4b;
+  --progress-color:  #ff6c34;
+  --important:         #e52515
+}
+
+$font-style: normal 22px "Roboto", "Arial";
+
+%header-block {
+  height: 6vw;
+  width: 41vw;
+  margin-top: 10px;
+}
+
+%header-font {
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+%list-blocks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 20px;
+}
