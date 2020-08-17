@@ -1,5 +1,7 @@
+@import 'mixins.scss';
+
 $screen-sm: 320px;
-$screen-lg: 1200px;
+$screen-lg: 1024px;
 
 :root {
   --bgcolor:         #ffffff;
@@ -11,12 +13,20 @@ $screen-lg: 1200px;
   --important:         #e52515
 }
 
-$font-style: normal 22px "Roboto", "Arial";
+$tablet-size: 800px;
+$tablet-border: 10px;
+
+$font-big-style: normal 22px "Roboto", "Arial";
+$font-style: normal 18px "Roboto", "Arial";
 
 %header-block {
   height: 6vw;
   width: 41vw;
   margin-top: 10px;
+  @include w-from($screen-lg) {
+    width: 100%;
+    height: 40px;
+  }
 }
 
 %header-font {

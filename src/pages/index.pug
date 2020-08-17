@@ -4,9 +4,10 @@ html(lang="ru")
     include parts/head.pug
     link(rel="stylesheet" href="styles/index.css")
   body
-    include parts/header.pug
-    main.today
-        div.today-add
-            input(type="text" placeholder="Введите задачу").today-add__message 
-        ul.today-list
+    .container
+      include parts/header.pug
+      main.today
+          div.today-add
+              input(type="text" placeholder="Введите задачу").today-add__message 
+          ul.today-list
   script(src="scripts/script.js")

@@ -1,4 +1,4 @@
-@import 'mixins.scss', 'vars.scss';
+@import 'vars.scss';
 
 * {
   margin: 0;
@@ -6,8 +6,17 @@
   }
 
 body {
-  @mixin w-from($screen-lg) {
-    width: 1200px;
+  background-color: var(--bgcolor);
+  width: 100%;
+  overflow-y: hidden;
+  font: $font-style;
+}
+
+.container {
+  @include w-from($screen-lg) {
+    width: $tablet-size;
     margin: 0 auto;
+    border: $tablet-border solid var(--backgroundcolor);
+    border-top: none;
   }
 }

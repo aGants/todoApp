@@ -5,16 +5,21 @@
   width: 90vw;
   margin: 15px auto 30px;
   font: $font-style;
+  @include w-from($screen-lg) {
+    width: $tablet-size;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
 
   &__img {
-    width: 35vw;
-    height: 35vw;
+    width: 35%;
+    height: 35%;
     border: 5px solid var(--border-color);
   }
 
   &-info {
-    width: 40vw;
-    height: 35vw;
+    width: 40%;
+    height: 35%;
 
     &__name {
       margin-top: 1vw;
@@ -31,7 +36,7 @@
 
     &__progress {
       @extend %header-block;
-      border: 1vw solid var(--border-color);
+      border: 3px solid var(--border-color);
       color: var(--progress-color);
       
       &::-webkit-progress-bar { background-color: var(--bgcolor); }
@@ -46,9 +51,15 @@
       height: 7vw;
       outline: none;
       border: 0px;
-      background-color: var(--border-color);
       font-size: large;
       color: var(--subtitle-color);
+      background-color: var(--border-color);
+      &:hover {
+        cursor: pointer;
+      }
+      @include w-from($screen-lg) {
+        height: 50px;
+      }
     }
 
 

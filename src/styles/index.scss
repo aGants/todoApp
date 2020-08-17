@@ -69,6 +69,7 @@ input[type=checkbox]+label:before {
   text-align: center;
   vertical-align: middle;
   transition: color ease .3s;
+  cursor: pointer;
 }
 
 input[type=checkbox]:checked+label:before {
