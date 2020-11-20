@@ -12,8 +12,6 @@ const cssnano      = require('cssnano');
 const imagemin     = require('gulp-imagemin');
 const uglify       = require('gulp-uglify-es').default;
 const concat       = require('gulp-concat'); 
-const webpack      = require('webpack-stream');
-const named        = require('vinyl-named');
 
 function ghPages(cb) {
   ghpages.publish(path.join(process.cwd(), './build'), cb);
@@ -54,8 +52,6 @@ function buildAssets() {
 
 function buildScripts() {
   return src('src/scripts/*.js')
-    .pipe(named())
-    .pipe(webpack())
     .pipe(uglify())
     .pipe(dest('build/scripts/'));
 }
